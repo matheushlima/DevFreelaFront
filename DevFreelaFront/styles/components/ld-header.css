@@ -16,11 +16,53 @@
     justify-content: center;
 }
 
-.ld-header > .ld-header-wrapper > .image-wrapper{
+.ld-header > .ld-header-wrapper.-has-user{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.ld-header > .ld-header-wrapper > .logo-wrapper{
     height: var(--ld-header-size);
     padding: 16px 0;
 }
 
-.ld-header > .ld-header-wrapper > .image-wrapper > .image{
+.ld-header > .ld-header-wrapper > .logo-wrapper > .image{
     height: 100%;
+}
+
+.ld-header > .ld-header-wrapper > .user{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.ld-header > .ld-header-wrapper > .user > .info{
+    text-align: right;
+}
+
+.ld-header > .ld-header-wrapper > .user > .info > .name{
+    margin-bottom: 3px;
+    font-weight: 800;
+    font-size: calc(var(--ld-font-size-base) + 4px);
+    display: block;
+}
+
+.ld-header > .ld-header-wrapper > .user > .info > .name > .role{
+    font-weight: 400;
+    font-size: calc(var(--ld-font-size-base) + 2px);
+    display: block;
+}
+
+.ld-header > .ld-header-wrapper > .user > .photo-wrapper{
+    margin-left: 12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--ld-color-primary);
+    overflow: hidden;
+}
+
+.ld-header > .ld-header-wrapper > .user > .photo-wrapper > img{
+    height: 100%;
+    width: 100%;
 }
