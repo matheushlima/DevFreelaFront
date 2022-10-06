@@ -8,7 +8,8 @@
 
      /* GRAY */
     --ld-color-gray-light: #B8B7B7;
-    --ld-color-gray-lighter: #F9FBFD;
+    --ld-color-gray-lightest: #F9FBFD;
+    --ld-color-gray-lighter: rgba(196,196,196,0.35);
     --ld-color-gray: #767684;
     --ld-color-dark: #09090A;
 }
