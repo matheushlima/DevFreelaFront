@@ -37,21 +37,23 @@
     <link rel="stylesheet" href="styles/components/ld-header.css">
 
     <!-- PAGES -->
-    <link rel="stylesheet" href="styles/pages/create.css">
+    <link rel="stylesheet" href="styles/pages/project-create-edit.css">
 
     <!-- TRUMPS -->
+
+    <!-- SCRIPTS -->
+    <script src="scripts/project-create-edit.js"></script>
 
 </head>
 
 <body>
-    <div class="ld-create"> 
+    <div class="ld-project-create-edit"> 
         <div class="ld-wrapper">
             <header class="ld-header">  
                 <div class="ld-header-wrapper">
                     <div class="image-wrapper">
                         <img class="image"src="assets/logo/devfreela.svg" alt="Logo do DevFreela">
                     </div>
-                    
                 </div>
             </header>
 
@@ -60,25 +62,18 @@
                     keyboard_arrow_left
                 </a>
 
-                <div class="left">
+                <form class="left" onsubmit="createOrEdit()" action="javascript:void(0)">
 
-                    <h1 class="main-title">
-                        Vamos cadastrar seu novo projeto!
-                    </h1>
+                    <h1 class="main-title" id="main-title"></h1>
 
                     <!-- INPUTS -->
-                    <input placeholder='Título'class='ld-input' type="text">
-                    <input placeholder='Custo total'class='ld-input' type="text">
-                    <textarea placeholder='Descrição'class='ld-input'></textarea>
+                    <input required id="title" placeholder='Título'class='ld-input' type="text">
+                    <input required id="totalCost" placeholder='Custo total'class='ld-input' type="text">
+                    <textarea required id="description" placeholder='Descrição'class='ld-input'></textarea>
                     
                     <!-- BOTAO -->
-                    <button class="ld-button">
-                        Continuar
-                    </button>
-
-                    
-
-                </div>
+                    <button type="submit" class="ld-button" id="action-button"></button>
+                </form>
                 <div class="right">
                     <img class="image" src="assets/image/bg-float-cubes.png" alt="Fundo de decoração com 3 cubos com fundo gradient das cores do arco-iris">
                 </div>

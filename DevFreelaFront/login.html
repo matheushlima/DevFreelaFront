@@ -41,6 +41,9 @@
 
     <!-- TRUMPS -->
 
+    <!-- SCRIPTS -->
+    <script src="scripts/login.js"></script>
+
 </head>
 
 <body>
@@ -56,9 +59,7 @@
             </header>
 
             <main class="main-content"> 
-                <div class="left">
-
-                    <span class="steps">PASSO 1 DE 2</span>
+                <form class="left" onsubmit="cadastrar()" action="javascript:void(0)">
 
                     <h1 class="main-title">
                         <span class="up">Olá!</span>
@@ -71,32 +72,30 @@
                         <div class="buttons">
                             <label class="ld-radio"> 
                                 Dev
-                                <input name="cargo" type="radio">
+                                <input name="role" type="radio">
                                 <span class="checkmark"></span>
                             </label>
     
                             <label class="ld-radio"> 
                                 Cliente
-                                <input name="cargo" type="radio">
+                                <input name="role" type="radio">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
                     </div>
 
                     <!-- INPUTS -->
-                    <input placeholder='Nome completo'class='ld-input' type="text">
-                    <input placeholder='Data de nascimento'class='ld-input' type="date">
-                    <input placeholder='Email'class='ld-input' type="email">
-                    <input placeholder='Senha'class='ld-input' type="password">
+                    <input required id="fullName" placeholder='Nome completo'     class='ld-input'>
+                    <input required id="birthdate" placeholder='Data de nascimento'class='ld-input' type="date">
+                    <input required id="email" placeholder='Email'             class='ld-input' type="email">
+                    <input required id="password" placeholder='Senha'             class='ld-input' type="password">
                     
                     <!-- BOTAO -->
-                    <button class="ld-button">
+                    <button type="submit" class="ld-button">
                         Continuar
                     </button>
 
-                    
-
-                </div>
+                </form>
                 <div class="right">
                     <img class="image" src="assets/image/bg-cubes.png" alt="Fundo de decoração com 3 cubos com fundo gradient das cores do arco-iris">
                 </div>
@@ -107,3 +106,4 @@
 </body>
 
 </html>
+id="" 
