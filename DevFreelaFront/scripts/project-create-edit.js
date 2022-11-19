@@ -23,16 +23,36 @@ function createOrEdit(){
     .then(response => response.json())
     .then(response => {
         if(screenType == 'edit'){
-            alert('Editado com sucesso!');
+            Swal.fire({
+                title: 'Bom trabalho!',
+                text: "Editado com sucesso!",
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "list.html"
+                }
+              })
         }
         else{
-            alert('Cadastrado com sucesso!');
+            Swal.fire({
+                title: 'Bom trabalho!',
+                text: "Cadastrado com sucesso!",
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "list.html"
+                }
+              })
         }
-        
-        window.location.href = "list.html"
     })
     .catch(error => {
-        alert('Erro no servidor');
+        Swal.fire(
+            'Oops!',
+            'Erro no servidor',
+            'error'
+          )
         console.log(error)
     })
 }
