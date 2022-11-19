@@ -41,6 +41,7 @@ function cadastrar(){
         
         localStorage.setItem("userName", response.fullName);
         localStorage.setItem("role", response.role === 'dev' ? "Desenvolvedor" : "Cliente");
+        localStorage.setItem("idClient", response.id);
 
         window.location.href = 'list.html';
     })

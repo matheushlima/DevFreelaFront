@@ -9,7 +9,7 @@ function createOrEdit(){
         title: document.querySelector('#title').value,
         description: document.querySelector('#description').value,
         totalCost: document.querySelector('#totalCost').value,
-        idClient: 1
+        idClient: localStorage.getItem("idClient")
     }
 
     //Enviar para API
@@ -29,6 +29,7 @@ function createOrEdit(){
             alert('Cadastrado com sucesso!');
         }
         
+        window.location.href = "list.html"
     })
     .catch(error => {
         alert('Erro no servidor');
@@ -38,6 +39,19 @@ function createOrEdit(){
 
 window.onload = function(){
     setScreenTypeTexts();
+    fillInputs();
+}
+
+function fillInputs() {
+    if (screenType === 'edit') {
+        fetch(`https://622cd1e6087e0e041e147214.mockapi.io/api/projects/${params.id}`)
+            .then(response => response.json())
+            .then(project => {
+                document.querySelector("#title").value = project.title;
+                document.querySelector("#totalCost").value = project.totalCost;
+                document.querySelector("#description").value = project.description;
+            })
+    }
 }
 
 function setScreenTypeTexts(){
